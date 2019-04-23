@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="estrategias_indicadores@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.7">
+    <root id="1"/>
+    <database id="2" parent="1" name="estrategias_indicadores">
+      <ObjectId>24482</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="3" parent="1" name="postgres">
+      <ObjectId>12401</ObjectId>
+    </database>
+    <database id="4" parent="1" name="sis_conv_post_cas">
+      <ObjectId>16393</ObjectId>
+    </database>
+    <database id="5" parent="1" name="app_habitaciones">
+      <ObjectId>30090</ObjectId>
+    </database>
+    <role id="6" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="7" parent="1" name="postgres">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <BypassRls>1</BypassRls>
+    </role>
+    <schema id="8" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2019-04-17.10:11:10.481</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1743</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="9" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="10" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="11" parent="2" name="pg_temp_1">
+      <ObjectId>11848</ObjectId>
+    </schema>
+    <schema id="12" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11849</ObjectId>
+    </schema>
+    <schema id="13" parent="2" name="information_schema">
+      <ObjectId>12113</ObjectId>
+    </schema>
+    <sequence id="14" parent="8" name="establecimiento_id_seq">
+      <ObjectId>28574</ObjectId>
+      <StateNumber>1727</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="15" parent="8" name="meta_general_id_seq">
+      <ObjectId>28578</ObjectId>
+      <StateNumber>1727</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="16" parent="8" name="meta_id_seq">
+      <ObjectId>28576</ObjectId>
+      <StateNumber>1727</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="17" parent="8" name="ris_id_seq">
+      <ObjectId>28580</ObjectId>
+      <StateNumber>1727</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="18" parent="8" name="usuario_id_seq">
+      <ObjectId>28760</ObjectId>
+      <StateNumber>1743</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="19" parent="8" name="vacuna_general_id_seq">
+      <ObjectId>24733</ObjectId>
+      <StateNumber>1329</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <table id="20" parent="8" name="establecimiento">
+      <ObjectId>28601</ObjectId>
+      <StateNumber>1727</StateNumber>
+    </table>
+    <table id="21" parent="8" name="menu">
+      <ObjectId>28781</ObjectId>
+      <StateNumber>1743</StateNumber>
+    </table>
+    <table id="22" parent="8" name="meta">
+      <ObjectId>28624</ObjectId>
+      <StateNumber>1727</StateNumber>
+    </table>
+    <table id="23" parent="8" name="meta_general">
+      <ObjectId>28614</ObjectId>
+      <StateNumber>1727</StateNumber>
+    </table>
+    <table id="24" parent="8" name="permiso_usuario">
+      <ObjectId>27580</ObjectId>
+      <StateNumber>1584</StateNumber>
+    </table>
+    <table id="25" parent="8" name="result_avance">
+      <ObjectId>28000</ObjectId>
+      <StateNumber>1636</StateNumber>
+    </table>
+    <table id="26" parent="8" name="ris">
+      <ObjectId>28589</ObjectId>
+      <StateNumber>1727</StateNumber>
+    </table>
+    <table id="27" parent="8" name="rol_permiso">
+      <ObjectId>28776</ObjectId>
+      <StateNumber>1743</StateNumber>
+    </table>
+    <table id="28" parent="8" name="tabla_tipo">
+      <ObjectId>28582</ObjectId>
+      <StateNumber>1727</StateNumber>
+    </table>
+    <table id="29" parent="8" name="usuario">
+      <ObjectId>28762</ObjectId>
+      <StateNumber>1743</StateNumber>
+    </table>
+    <table id="30" parent="8" name="usuario_permiso">
+      <ObjectId>28771</ObjectId>
+      <StateNumber>1743</StateNumber>
+    </table>
+    <table id="31" parent="8" name="vacuna_general">
+      <ObjectId>28633</ObjectId>
+      <StateNumber>1727</StateNumber>
+    </table>
+    <routine id="32" parent="8" name="get_meta_by_mes">
+      <ObjectId>27999</ObjectId>
+      <StateNumber>1727</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ArgumentsDefinition>id_meta integer, nro_mes integer</ArgumentsDefinition>
+      <ResultsDefinition>numeric</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <ConcurrencyKind>unsafe</ConcurrencyKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <column id="33" parent="20" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1727</StateNumber>
+      <DefaultExpression>nextval(&apos;establecimiento_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="34" parent="20" name="codigo_renaes">
+      <Position>2</Position>
+      <DataType>char(8)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1727</StateNumber>
+      <TypeId>1042</TypeId>
+    </column>
+    <column id="35" parent="20" name="descripcion">
+      <Position>3</Position>
+      <DataType>varchar(200)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1727</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="36" parent="20" name="red">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1727</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="37" parent="20" name="fecha_reg">
+      <Position>5</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1727</StateNumber>
+      <DefaultExpression>(&apos;now&apos;::text)::date</DefaultExpression>
+      <TypeId>1082</TypeId>
+    </column>
+    <column id="38" parent="20" name="activo">
+      <Position>6</Position>
+      <DataType>boolean|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1727</StateNumber>
+      <DefaultExpression>true</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="39" parent="20" name="id_usuario">
+      <Position>7</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1727</StateNumber>
+      <DefaultExpression>1</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="40" parent="20" name="establecimiento_pkey">
+      <ObjectId>28608</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="41" parent="20" name="establecimiento_codigo_renaes_key">
+      <ObjectId>28610</ObjectId>
+      <ColNames>codigo_renaes</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="42" parent="20" name="i_establecimientos_codigo">
+      <ObjectId>28613</ObjectId>
+      <ColNames>codigo_renaes</ColNames>
+    </index>
+    <index id="43" parent="20" name="i_establecimientos_descripcion">
+      <ObjectId>28612</ObjectId>
+      <ColNames>descripcion</ColNames>
+    </index>
+    <key id="44" parent="20" name="establecimiento_pkey">
+      <ObjectId>28609</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>establecimiento_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="45" parent="20" name="establecimiento_codigo_renaes_key">
+      <ObjectId>28611</ObjectId>
+      <ColNames>codigo_renaes</ColNames>
+      <UnderlyingIndexName>establecimiento_codigo_renaes_key</UnderlyingIndexName>
+    </key>
+    <column id="46" parent="21" name="id_menu">
+      <Position>1</Position>
+      <Comment>Id del Menú</Comment>
+      <DataType>varchar(6)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1743</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="47" parent="21" name="pad_name">
+      <Position>2</Position>
+      <Comment>Nombre del Menú</Comment>
+      <DataType>varchar(50)|0</DataType>
+      <StateNumber>1743</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="48" parent="21" name="bar_name">
+      <Position>3</Position>
+      <Comment>Nombre del Sub Menú</Comment>
+      <DataType>varchar(100)|0</DataType>
+      <StateNumber>1743</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="49" parent="21" name="bar_order">
+      <Position>4</Position>
+      <Comment>Orden del Menú</Comment>
+      <DataType>smallint|0</DataType>
+      <StateNumber>1743</StateNumber>
+      <DefaultExpression>0</DefaultExpression>
+      <TypeId>21</TypeId>
+    </column>
+    <column id="50" parent="21" name="bar_link">
+      <Position>5</Position>
+      <Comment>Url del Archivo</Comment>
+      <DataType>varchar(50)|0</DataType>
+      <StateNumber>1743</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="51" parent="21" name="bar_img">
+      <Position>6</Position>
+      <Comment>Imagen Menú</Comment>
+      <DataType>varchar(50)|0</DataType>
+      <StateNumber>1743</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="52" parent="21" name="bar_img_p">
+      <Position>7</Position>
+      <Comment>Imagen Sub Menú</Comment>
+      <DataType>varchar(50)|0</DataType>
+      <StateNumber>1743</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="53" parent="21" name="id_estado">
+      <Position>8</Position>
+      <Comment>Estado del Registro</Comment>
+      <DataType>varchar(2)|0</DataType>
+      <StateNumber>1743</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="54" parent="21" name="alias">
+      <Position>9</Position>
+      <Comment>Url Alias</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>1743</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="55" parent="21" name="menu_pkey">
+      <ObjectId>28788</ObjectId>
+      <ColNames>id_menu</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="56" parent="21" name="menu_pkey">
+      <ObjectId>28789</ObjectId>
+      <ColNames>id_menu</ColNames>
+      <UnderlyingIndexName>menu_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="57" parent="22" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1727</StateNumber>
+      <DefaultExpression>nextval(&apos;meta_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="58" parent="22" name="meta_general">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1727</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="59" parent="22" name="establecimiento">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1727</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="60" parent="22" name="meta_anual">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1727</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="61" parent="22" name="meta_pkey">
+      <ObjectId>28628</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="62" parent="22" name="meta_establecimiento_meta_general_key">
+      <ObjectId>28630</ObjectId>
+      <ColNames>establecimiento
+meta_general</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="63" parent="22" name="i_meta_establecimiento">
+      <ObjectId>28632</ObjectId>
+      <ColNames>establecimiento</ColNames>
+    </index>
+    <key id="64" parent="22" name="meta_pkey">
+      <ObjectId>28629</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>meta_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="65" parent="22" name="meta_establecimiento_meta_general_key">
+      <ObjectId>28631</ObjectId>
+      <ColNames>establecimiento
+meta_general</ColNames>
+      <UnderlyingIndexName>meta_establecimiento_meta_general_key</UnderlyingIndexName>
+    </key>
+    <column id="66" parent="23" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1727</StateNumber>
+      <DefaultExpression>nextval(&apos;meta_general_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="67" parent="23" name="anio">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1727</StateNumber>
+      <DefaultExpression>date_part(&apos;year&apos;::text, (&apos;now&apos;::text)::date)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="68" parent="23" name="umbral">
+      <Position>3</Position>
+      <DataType>numeric(5,2)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1727</StateNumber>
+      <TypeId>1700</TypeId>
+    </column>
+    <column id="69" parent="23" name="meta_porcentaje">
+      <Position>4</Position>
+      <DataType>numeric(5,2)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1727</StateNumber>
+      <TypeId>1700</TypeId>
+    </column>
+    <column id="70" parent="23" name="paciente_tipo_edad">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1727</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="71" parent="23" name="id_usuario">
+      <Position>6</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1727</StateNumber>
+      <DefaultExpression>1</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="72" parent="23" name="meta_general_pkey">
+      <ObjectId>28620</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="73" parent="23" name="meta_general_anio_key">
+      <ObjectId>28622</ObjectId>
+      <ColNames>anio</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="74" parent="23" name="meta_general_pkey">
+      <ObjectId>28621</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>meta_general_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="75" parent="23" name="meta_general_anio_key">
+      <ObjectId>28623</ObjectId>
+      <ColNames>anio</ColNames>
+      <UnderlyingIndexName>meta_general_anio_key</UnderlyingIndexName>
+    </key>
+    <column id="76" parent="24" name="id_usuario">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1584</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="77" parent="24" name="id_permiso">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1584</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="78" parent="24" name="permiso_usuario_pkey">
+      <ObjectId>27583</ObjectId>
+      <ColNames>id_permiso
+id_usuario</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="79" parent="24" name="permiso_usuario_pkey">
+      <ObjectId>27584</ObjectId>
+      <ColNames>id_permiso
+id_usuario</ColNames>
+      <UnderlyingIndexName>permiso_usuario_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="80" parent="25" name="sum">
+      <Position>1</Position>
+      <DataType>numeric|0</DataType>
+      <StateNumber>1636</StateNumber>
+      <TypeId>1700</TypeId>
+    </column>
+    <column id="81" parent="26" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1727</StateNumber>
+      <DefaultExpression>nextval(&apos;ris_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="82" parent="26" name="descripcion">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1727</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="83" parent="26" name="val_abrev">
+      <Position>3</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1727</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="84" parent="26" name="fecha_reg">
+      <Position>4</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1727</StateNumber>
+      <DefaultExpression>(&apos;now&apos;::text)::date</DefaultExpression>
+      <TypeId>1082</TypeId>
+    </column>
+    <column id="85" parent="26" name="activo">
+      <Position>5</Position>
+      <DataType>boolean|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1727</StateNumber>
+      <DefaultExpression>true</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <index id="86" parent="26" name="ris_pkey">
+      <ObjectId>28595</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="87" parent="26" name="ris_descripcion_key">
+      <ObjectId>28597</ObjectId>
+      <ColNames>descripcion</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="88" parent="26" name="ris_val_abrev_key">
+      <ObjectId>28599</ObjectId>
+      <ColNames>val_abrev</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="89" parent="26" name="ris_pkey">
+      <ObjectId>28596</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>ris_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="90" parent="26" name="ris_descripcion_key">
+      <ObjectId>28598</ObjectId>
+      <ColNames>descripcion</ColNames>
+      <UnderlyingIndexName>ris_descripcion_key</UnderlyingIndexName>
+    </key>
+    <key id="91" parent="26" name="ris_val_abrev_key">
+      <ObjectId>28600</ObjectId>
+      <ColNames>val_abrev</ColNames>
+      <UnderlyingIndexName>ris_val_abrev_key</UnderlyingIndexName>
+    </key>
+    <column id="92" parent="27" name="id_rol">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1743</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="93" parent="27" name="id_permiso">
+      <Position>2</Position>
+      <DataType>varchar(6)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1743</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="94" parent="27" name="rol_permiso_pkey">
+      <ObjectId>28779</ObjectId>
+      <ColNames>id_rol
+id_permiso</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="95" parent="27" name="rol_permiso_pkey">
+      <ObjectId>28780</ObjectId>
+      <ColNames>id_rol
+id_permiso</ColNames>
+      <UnderlyingIndexName>rol_permiso_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="96" parent="28" name="id_tabla">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1727</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="97" parent="28" name="id_tipo">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1727</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="98" parent="28" name="descripcion">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1727</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="99" parent="28" name="fecha_reg">
+      <Position>4</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1727</StateNumber>
+      <DefaultExpression>(&apos;now&apos;::text)::date</DefaultExpression>
+      <TypeId>1082</TypeId>
+    </column>
+    <column id="100" parent="28" name="activo">
+      <Position>5</Position>
+      <DataType>boolean|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1727</StateNumber>
+      <DefaultExpression>true</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <index id="101" parent="28" name="tabla_tipo_pkey">
+      <ObjectId>28587</ObjectId>
+      <ColNames>id_tabla
+id_tipo</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="102" parent="28" name="tabla_tipo_pkey">
+      <ObjectId>28588</ObjectId>
+      <ColNames>id_tabla
+id_tipo</ColNames>
+      <UnderlyingIndexName>tabla_tipo_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="103" parent="29" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1743</StateNumber>
+      <DefaultExpression>nextval(&apos;usuario_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="104" parent="29" name="nombre_usuario">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1743</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="105" parent="29" name="clave_usuario">
+      <Position>3</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1743</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="106" parent="29" name="apellido_pat">
+      <Position>4</Position>
+      <DataType>varchar(200)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1743</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="107" parent="29" name="apellido_mat">
+      <Position>5</Position>
+      <DataType>varchar(200)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1743</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="108" parent="29" name="nombres">
+      <Position>6</Position>
+      <DataType>varchar(200)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1743</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="109" parent="29" name="email">
+      <Position>7</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1743</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="110" parent="29" name="dni">
+      <Position>8</Position>
+      <DataType>char(8)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1743</StateNumber>
+      <TypeId>1042</TypeId>
+    </column>
+    <column id="111" parent="29" name="activo">
+      <Position>9</Position>
+      <DataType>boolean|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1743</StateNumber>
+      <DefaultExpression>true</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="112" parent="29" name="rol">
+      <Position>10</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1743</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="113" parent="29" name="fecha_reg">
+      <Position>11</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1743</StateNumber>
+      <DefaultExpression>(&apos;now&apos;::text)::date</DefaultExpression>
+      <TypeId>1082</TypeId>
+    </column>
+    <column id="114" parent="30" name="id_usuario">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1743</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="115" parent="30" name="id_permiso">
+      <Position>2</Position>
+      <DataType>varchar(6)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1743</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="116" parent="30" name="usuario_permiso_pkey">
+      <ObjectId>28774</ObjectId>
+      <ColNames>id_permiso
+id_usuario</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="117" parent="30" name="usuario_permiso_pkey">
+      <ObjectId>28775</ObjectId>
+      <ColNames>id_permiso
+id_usuario</ColNames>
+      <UnderlyingIndexName>usuario_permiso_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="118" parent="31" name="meta">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1727</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="119" parent="31" name="mes">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1727</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="120" parent="31" name="penta">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1727</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="121" parent="31" name="rota">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1727</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="122" parent="31" name="neumo">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1727</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="123" parent="31" name="apo">
+      <Position>6</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1727</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="124" parent="31" name="spr">
+      <Position>7</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1727</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="125" parent="31" name="avance_mensual">
+      <Position>8</Position>
+      <DataType>numeric(5,2)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1727</StateNumber>
+      <TypeId>1700</TypeId>
+    </column>
+    <column id="126" parent="31" name="id_usuario">
+      <Position>9</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1727</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="127" parent="31" name="vacuna_general_pkey">
+      <ObjectId>28636</ObjectId>
+      <ColNames>meta
+mes</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="128" parent="31" name="vacuna_general_pkey">
+      <ObjectId>28637</ObjectId>
+      <ColNames>meta
+mes</ColNames>
+      <UnderlyingIndexName>vacuna_general_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <argument id="129" parent="32" name="id_meta">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+    </argument>
+    <argument id="130" parent="32" name="nro_mes">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+    </argument>
+    <argument id="131" parent="32">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>numeric|0</DataType>
+    </argument>
+  </database-model>
+</dataSource>
